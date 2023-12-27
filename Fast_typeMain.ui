@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1280</width>
+      <height>720</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="Mane">
+     <property name="styleSheet">
+      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(188, 255, 199, 255), stop:1 rgba(174, 231, 255, 255));</string>
+     </property>
+     <widget class="QLabel" name="type">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>70</y>
+        <width>131</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0);
+font: 60pt &quot;Agency FB&quot;;</string>
+      </property>
+      <property name="text">
+       <string>type</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Fast">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>70</y>
+        <width>181</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(255, 255, 255, 0);
+font: 65pt &quot;Dancing Script&quot;;
+
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>Fast</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="lrn">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>280</y>
+        <width>421</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 203, 185);
+	font: 57 20pt &quot;Montserrat Medium&quot;;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+	font-size: 22pt;   
+}
+
+QPushButton:pressed {
+	background-color: rgb(229, 182, 166);	   
+}</string>
+      </property>
+      <property name="text">
+       <string>Обучение</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="gm">
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>470</y>
+        <width>341</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 203, 185);
+	font: 57 20pt &quot;Montserrat Medium&quot;;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+	font-size: 22pt;   
+}
+
+QPushButton:pressed {
+	background-color: rgb(229, 182, 166);	   
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Игры</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ex">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>470</y>
+        <width>341</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 203, 185);
+	font: 57 20pt &quot;Montserrat Medium&quot;;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+	font-size: 22pt;   
+}
+
+QPushButton:pressed {
+	background-color: rgb(229, 182, 166);	   
+}</string>
+      </property>
+      <property name="text">
+       <string>Тренировка</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Learning">
+     <property name="styleSheet">
+      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(188, 255, 199, 255), stop:1 rgba(174, 231, 255, 255));</string>
+     </property>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>60</y>
+        <width>271</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 30pt &quot;Montserrat Medium&quot;;
+background-color:  rgba(188, 255, 199, 0)</string>
+      </property>
+      <property name="text">
+       <string>Обучение</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="lvl_1">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>180</y>
+        <width>241</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 203, 185);
+	font: 15pt &quot;Montserrat Medium&quot;;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+	font-size: 17pt;   
+}
+
+QPushButton:pressed {
+	background-color: rgb(229, 182, 166);	   
+}</string>
+      </property>
+      <property name="text">
+       <string>Уровень 1</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="lvl_2">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>180</y>
+        <width>241</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 203, 185);
+	font: 15pt &quot;Montserrat Medium&quot;;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+	font-size: 17pt;   
+}
+
+QPushButton:pressed {
+	background-color: rgb(229, 182, 166);	   
+}</string>
+      </property>
+      <property name="text">
+       <string>Уровень 2</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="lvl_3">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>180</y>
+        <width>241</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 203, 185);
+	font: 15pt &quot;Montserrat Medium&quot;;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+	font-size: 17pt;   
+}
+
+QPushButton:pressed {
+	background-color: rgb(229, 182, 166);	   
+}</string>
+      </property>
+      <property name="text">
+       <string>Уровень 3</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="lvl_4">
+      <property name="geometry">
+       <rect>
+        <x>980</x>
+        <y>180</y>
+        <width>241</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 203, 185);
+	font: 15pt &quot;Montserrat Medium&quot;;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+	font-size: 17pt;   
+}
+
+QPushButton:pressed {
+	background-color: rgb(229, 182, 166);	   
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Уровень 4</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="lvl_5">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>350</y>
+        <width>241</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 203, 185);
+	font: 15pt &quot;Montserrat Medium&quot;;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+	font-size: 17pt;   
+}
+
+QPushButton:pressed {
+	background-color: rgb(229, 182, 166);	   
+}</string>
+      </property>
+      <property name="text">
+       <string>Уровень 5</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="lvl_8">
+      <property name="geometry">
+       <rect>
+        <x>980</x>
+        <y>350</y>
+        <width>241</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 203, 185);
+	font: 15pt &quot;Montserrat Medium&quot;;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+	font-size: 17pt;   
+}
+
+QPushButton:pressed {
+	background-color: rgb(229, 182, 166);	   
+}</string>
+      </property>
+      <property name="text">
+       <string>Уровень 8</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="lvl_7">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>350</y>
+        <width>241</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 203, 185);
+	font: 15pt &quot;Montserrat Medium&quot;;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+	font-size: 17pt;   
+}
+
+QPushButton:pressed {
+	background-color: rgb(229, 182, 166);	   
+}</string>
+      </property>
+      <property name="text">
+       <string>Уровень 7</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="lvl_6">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>350</y>
+        <width>241</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 203, 185);
+	font: 15pt &quot;Montserrat Medium&quot;;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+	font-size: 17pt;   
+}
+
+QPushButton:pressed {
+	background-color: rgb(229, 182, 166);	   
+}</string>
+      </property>
+      <property name="text">
+       <string>Уровень 6</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="lvl_12">
+      <property name="geometry">
+       <rect>
+        <x>980</x>
+        <y>530</y>
+        <width>241</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 203, 185);
+	font: 15pt &quot;Montserrat Medium&quot;;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+	font-size: 17pt;   
+}
+
+QPushButton:pressed {
+	background-color: rgb(229, 182, 166);	   
+}</string>
+      </property>
+      <property name="text">
+       <string>Уровень 12</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="lvl_9">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>530</y>
+        <width>241</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 203, 185);
+	font: 15pt &quot;Montserrat Medium&quot;;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+	font-size: 17pt;   
+}
+
+QPushButton:pressed {
+	background-color: rgb(229, 182, 166);	   
+}</string>
+      </property>
+      <property name="text">
+       <string>Уровень 9</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="lvl_10">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>530</y>
+        <width>241</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 203, 185);
+	font: 15pt &quot;Montserrat Medium&quot;;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+	font-size: 17pt;   
+}
+
+QPushButton:pressed {
+	background-color: rgb(229, 182, 166);	   
+}</string>
+      </property>
+      <property name="text">
+       <string>Уровень 10</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="lvl_11">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>530</y>
+        <width>241</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 203, 185);
+	font: 15pt &quot;Montserrat Medium&quot;;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+	font-size: 17pt;   
+}
+
+QPushButton:pressed {
+	background-color: rgb(229, 182, 166);	   
+}</string>
+      </property>
+      <property name="text">
+       <string>Уровень 11</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Exercise">
+     <property name="styleSheet">
+      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(188, 255, 199, 255), stop:1 rgba(174, 231, 255, 255));</string>
+     </property>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>50</y>
+        <width>321</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 30pt &quot;Montserrat Medium&quot;;
+background-color:  rgba(188, 255, 199, 0)</string>
+      </property>
+      <property name="text">
+       <string>Тренировка</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="time">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>350</y>
+        <width>341</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 203, 185);
+	font: 15pt &quot;Montserrat Medium&quot;;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+	font-size: 17pt;   
+}
+
+QPushButton:pressed {
+	background-color: rgb(229, 182, 166);	   
+}</string>
+      </property>
+      <property name="text">
+       <string>На время</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>200</y>
+        <width>261</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> border-radius: 5px;
+background-color: white;
+font: 10pt &quot;Roboto&quot;;</string>
+      </property>
+      <property name="editable">
+       <bool>false</bool>
+      </property>
+      <property name="currentText">
+       <string>Низкий</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Низкий</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Средний</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Высокий</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="choose_1">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>150</y>
+        <width>271</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(0, 0, 0, 0);
+font: 11pt &quot;Roboto&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Выберите уровень подготовки:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="story">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>350</y>
+        <width>341</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 203, 185);
+	font: 15pt &quot;Montserrat Medium&quot;;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+	font-size: 17pt;   
+}
+
+QPushButton:pressed {
+	background-color: rgb(229, 182, 166);	   
+}</string>
+      </property>
+      <property name="text">
+       <string>Истории</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="inf">
+      <property name="geometry">
+       <rect>
+        <x>880</x>
+        <y>350</y>
+        <width>341</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 203, 185);
+	font: 15pt &quot;Montserrat Medium&quot;;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+	font-size: 17pt;   
+}
+
+QPushButton:pressed {
+	background-color: rgb(229, 182, 166);	   
+}</string>
+      </property>
+      <property name="text">
+       <string>Бесконечный</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Games">
+     <property name="styleSheet">
+      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(188, 255, 199, 255), stop:1 rgba(174, 231, 255, 255));</string>
+     </property>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>50</y>
+        <width>151</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 30pt &quot;Montserrat Medium&quot;;
+background-color:  rgba(188, 255, 199, 0)</string>
+      </property>
+      <property name="text">
+       <string>Игры</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_2">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>200</y>
+        <width>261</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> border-radius: 5px;
+background-color: white;
+font: 10pt &quot;Roboto&quot;;</string>
+      </property>
+      <property name="editable">
+       <bool>false</bool>
+      </property>
+      <property name="currentText">
+       <string>Низкий</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Низкий</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Средний</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Высокий</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="choose_2">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>150</y>
+        <width>271</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgba(0, 0, 0, 0);
+font: 11pt &quot;Roboto&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Выберите уровень подготовки:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hear">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>350</y>
+        <width>341</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 203, 185);
+	font: 15pt &quot;Montserrat Medium&quot;;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+	font-size: 17pt;   
+}
+
+QPushButton:pressed {
+	background-color: rgb(229, 182, 166);	   
+}</string>
+      </property>
+      <property name="text">
+       <string>На слух</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pack">
+      <property name="geometry">
+       <rect>
+        <x>880</x>
+        <y>350</y>
+        <width>341</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 203, 185);
+	font: 15pt &quot;Montserrat Medium&quot;;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+	font-size: 17pt;   
+}
+
+QPushButton:pressed {
+	background-color: rgb(229, 182, 166);	   
+}</string>
+      </property>
+      <property name="text">
+       <string>Пакмен</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="rain">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>350</y>
+        <width>341</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(255, 203, 185);
+	font: 15pt &quot;Montserrat Medium&quot;;
+	border-radius: 20px;
+}
+
+QPushButton:hover {
+	font-size: 17pt;   
+}
+
+QPushButton:pressed {
+	background-color: rgb(229, 182, 166);	   
+}</string>
+      </property>
+      <property name="text">
+       <string>Дождь</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
