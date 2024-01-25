@@ -1,4 +1,6 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import threading
 
 # Form implementation generated from reading ui file 'Fast_typeMain.ui'
 #
@@ -9,6 +11,8 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from keyboard import *
+from threading import *
 
 
 class Ui_MainWindow(object):
@@ -16,19 +20,36 @@ class Ui_MainWindow(object):
     def btn(self, num):
         self.stackedWidget.setCurrentIndex(2)
         self.num = num
-        self.level()
+        self.win()
 
-    def level(self):
+    def win(self):
         self.label.setText(f"Уровень {self.num}")
 
         self.l = []
 
-        with open(f'level{self.num}.txt', 'r', encoding='utf-8') as f:
+        with open(f'levels/level{self.num}.txt', 'r', encoding='utf-8') as f:
             for i in f:
                     self.l.append(i)
 
         self.s = ''.join(self.l)
-        
+        _th = threading.Thread(target=self.start_level)
+        _th.start()
+
+    def start_level(self):
+        key_pressed = read_event()
+        if key_pressed.event_type == KEY_DOWN and key_pressed.name == 'space':
+            self.text_1.setText(self.s)
+        self.level()
+
+    def level(self):
+        i = 0
+        while i < len(self.s):
+            key = read_event()
+            key_name = key.name
+            if key.event_type == KEY_UP and (key_name == self.s[i]) or (key_name == 'space' and self.s[i] == ' '):
+                i += 1
+                text = self.s[i:]
+                self.text_1.setText(text)
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -60,12 +81,12 @@ class Ui_MainWindow(object):
         self.lrn.setGeometry(QtCore.QRect(440, 280, 421, 121))
         self.lrn.setStyleSheet("QPushButton{\n"
 "    background-color: rgb(255, 203, 185);\n"
-"    font: 25pt \"Montserrat Medium\";\n"
+"    font: 22pt \"Montserrat Medium\";\n"
 "    border-radius: 20px;\n"
 "}\n"
 "\n"
 "QPushButton:hover {\n"
-"    font-size: 22pt;   \n"
+"    font-size: 25pt;   \n"
 "}\n"
 "\n"
 "QPushButton:pressed {\n"
@@ -442,6 +463,7 @@ class Ui_MainWindow(object):
 "border: 1px solid rgb(100, 100, 100);")
         self.tab_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.tab_2.setObjectName("tab_2")
+        self.tab_2.setIndent(5)
         self.menu_2 = QtWidgets.QLabel(self.Levels)
         self.menu_2.setGeometry(QtCore.QRect(950, 560, 61, 51))
         self.menu_2.setLayoutDirection(QtCore.Qt.LeftToRight)
@@ -717,7 +739,7 @@ class Ui_MainWindow(object):
         self.text_1.setFont(font)
         self.text_1.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.text_1.setObjectName("text_1")
-        self.text_1.setIndent(10)
+        self.text_1.setIndent(50)
         self.n2_2 = QtWidgets.QLabel(self.Levels)
         self.n2_2.setGeometry(QtCore.QRect(310, 320, 51, 51))
         self.n2_2.setLayoutDirection(QtCore.Qt.LeftToRight)
@@ -1309,6 +1331,8 @@ class Ui_MainWindow(object):
         self.rain.setText(_translate("MainWindow", "Дождь"))
 
 
+# my_threat = Thread(target=Ui_MainWindow().start_level)
+# my_threat.start()
 
 if __name__ == "__main__":
     import sys
