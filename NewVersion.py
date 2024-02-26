@@ -40,11 +40,15 @@ class Ui_MainWindow(object):
         th1 = Thread(target=self.start_level)
         th1.start()
 
+        self.text_1.setAlignment(QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.text_1.setFont(QtGui.QFont("Roboto", 20))
+        self.text_1.setText('Нажмите любую клавишу')
+
         self.timer.start()
 
     def start_level(self):
         key_pressed = read_event()
-        if key_pressed.event_type == KEY_DOWN and key_pressed.name == 'space':
+        if key_pressed.event_type == KEY_DOWN:
             self.text_1.setText(self.s)
             self.level()
 
@@ -67,14 +71,25 @@ class Ui_MainWindow(object):
         self.timer.stop()
         f_temp = datetime.utcfromtimestamp(self.temp - 1).strftime("%M:%S")
         v = round(i / (self.temp - 1) * 60)
+        end = 'Ошибки: ' + str(mist) + '   Введено символов: ' + str(i) + '   Время: ' + str(f_temp) + '   Скорость (зн/мин): ' + str(v)
+        self.text_1.setAlignment(QtCore.Qt.AlignCenter)
+        self.text_1.setFont(QtGui.QFont("Roboto", 17))
+        self.text_1.setText(end)
         print('ошибки: ', mist)
         print('введено символов: ', i)
         print('время: ', f_temp)
         print('скорость (зн/мин): ', v)
+        self.temp = 0
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setFixedSize(1280, 720)
+
+        self.temp = 0
+
+        self.timer = QtCore.QTimer()
+        self.timer.setInterval(1000)
+        self.timer.timeout.connect(self.displayTime)
 
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -1089,12 +1104,6 @@ class Ui_MainWindow(object):
         self.win_l_2.setAlignment(QtCore.Qt.AlignCenter)
         self.win_l_2.setObjectName("win_l_2")
 
-        self.temp = 0
-
-        self.timer = QtCore.QTimer()
-        self.timer.setInterval(1000)
-        self.timer.timeout.connect(self.displayTime)
-
         self.home_icon1.raise_()
         self.home_icon2.raise_()
         self.bg_2.raise_()
@@ -1428,7 +1437,7 @@ class Ui_MainWindow(object):
         self.n4_2.setText(_translate("MainWindow", "4"))
         self.let3_12.setText(_translate("MainWindow", "ч"))
         self.n0_2.setText(_translate("MainWindow", "0"))
-        self.text_1.setText(_translate("MainWindow", "Нажмите пробел чтобы начать"))
+        self.text_1.setText(_translate("MainWindow", "Нажмите любую клавишу"))
         self.n2_2.setText(_translate("MainWindow", "2"))
         self.let1_14.setText(_translate("MainWindow", "ъ"))
         self.ctrl_r_2.setText(_translate("MainWindow", "Ctrl"))
